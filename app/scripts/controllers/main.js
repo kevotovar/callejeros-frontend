@@ -8,8 +8,11 @@
  * Controller of the callejeritosAngularApp
  */
 angular.module('callejeritosAngularApp')
-  .controller('MainCtrl', function ($scope,MascotasFactory) {
-    	
+  .controller('MainCtrl', function ($scope,MascotasFactory,UsersFactory,jwtHelper) {
+    	 $scope.jwt = localStorage.getItem('JWT');
+         $scope.decodedJwt = $scope.jwt && jwtHelper.decodeToken($scope.jwt);
+         console.log($scope.jwt);
+         console.log($scope.decodedJwt)
   		//Slider principal
     	$scope.images=[
     		'/images/bg1.jpg',
@@ -17,6 +20,16 @@ angular.module('callejeritosAngularApp')
     		'/images/bg4.jpg',
     		'/images/bg6.jpeg',
     	]
+        var GetUsers = function(){
+            UsersFactory.get().then(SuccessGetUsers,ErrorGetUsers)
+        }
+
+        var SuccessGetUsers = function(res){
+            console.log(res);
+        }
+        var ErrorGetUsers = function(res){
+            console.log(res);
+        }
 
     	var GetMascotas = function(){
     		MascotasFactory.get().then(SuccessGetMascotas,ErrorGetMascotas)
@@ -31,5 +44,6 @@ angular.module('callejeritosAngularApp')
     		console.log(res);
     	}
     	GetMascotas();
+        GetUsers();
 
   });

@@ -40,7 +40,7 @@ p {
   margin-bottom: 12px; 
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  font-size: 14px; 
+  font-size: 15px; 
   line-height: 24px;
   color: #384452; 
   margin-top: 10px; 
@@ -103,6 +103,26 @@ a:focus {
 .home-slider{
   margin-top: 60px;
 }
+.login{
+  margin-top: 30px;
+}
+.title-form{
+  padding: 25px;
+}
+.card-adoption{
+    margin-top: 20px;
+    background: #efefef;
+    padding: 25px;
+    border-radius: 30px;
+}
+.hline-card-adoption{
+    border-bottom: 2px solid #0071c0;
+}
+.name-card-adoption{
+    color: #0071c0;
+    font-size: 30px;
+    font-weight: 400;
+}
 .navbar {
   min-height: 70px;
   padding-top: 10px;
@@ -154,6 +174,8 @@ a:focus {
   background-color: #384452;
   border-color: #384452;
   margin: 4px;
+  margin-top: 15px;
+  padding: 10px;
 }
 .btn-theme:hover,
 .btn-theme:focus,
@@ -238,6 +260,7 @@ position: absolute;
     top: 0;
     right: 0;
     left: 0;
+    height: 550px;
     bottom: 86px;
     z-index: -1;
    background-color: rgba(0, 0, 0, 0.35);
@@ -268,7 +291,13 @@ position: absolute;
   font-size: 60px;
   padding: 15px;
 }
-
+.donativos{
+  color:#fff !important;
+}
+.donativos:hover{
+  color:#fff !important;
+  background: #1e4567 !important;
+}
 /* Portfolio Wrap */
 #portfoliowrap {
   padding-top: 60px;
@@ -397,13 +426,13 @@ position: absolute;
 
 #blue {
   background: #0071c0;
-  margin-top: 60px;
+  margin-top: 86px;
   margin-bottom: 60px;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
-#blue h3 {
+#blue h1 {
   color: white;
   margin-left: 15px;
 }
@@ -474,6 +503,8 @@ csmall2 {
 .popular-posts li img {
   float: left; 
   margin-right: 20px;
+  width: 55px;
+  height: 55px;
   }
   
 .popular-posts li em {
@@ -489,5 +520,5 @@ csmall2 {
 
 .share i {
   padding-right: 15px;
-  font-size: 18px;
+  font-size: 30px;
 }

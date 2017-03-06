@@ -32,6 +32,7 @@ module.exports = function(config) {
       'bower_components/jquery-backstretch/jquery.backstretch.js',
       'bower_components/ng-backstretch/dist/ng-backstretch.min.js',
       'bower_components/angular-jwt/dist/angular-jwt.js',
+      'bower_components/ngmap/build/scripts/ng-map.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

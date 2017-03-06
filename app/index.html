@@ -9,6 +9,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -36,10 +37,10 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">Entrar</a></li>
-            <li><a href="contact.html">Registrate</a></li>
-            <li><a class="btn btn-primary btn-outline" href="contact.html">Dona <img class="img-responsive paypal_logo" src="images/paypal_logo.png" alt=""></a></li>
+            <li class=""><a href="/">Home</a></li>
+            <li><a href="/#!/login">Entra</a></li>
+            <li><a href="/#!/signup">Regístrate</a></li>
+            <li><a class="btn btn-primary donativos" href="http://paypal.com">Donativos</a></li>
             <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -115,6 +116,7 @@
     <script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>
     <script src="bower_components/ng-backstretch/dist/ng-backstretch.min.js"></script>
     <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -123,6 +125,12 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/services.js"></script>
+        <script src="scripts/controllers/login_signup.js"></script>
+        <script src="scripts/lib/jquery.hoverex.min.js"></script>
+        <script src="scripts/lib/jquery.isotope.min.js"></script>
+        <script src="scripts/lib/jquery.prettyPhoto.js"></script>
+        <script src="scripts/lib/retina-1.1.0.js"></script>
+        <script src="http://maps.google.com/maps/api/js"></script>
         <!-- endbuild -->
 </body>
 </html>
