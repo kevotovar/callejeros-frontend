@@ -1,4 +1,4 @@
-'use strict';
+
 
 /**
  * @ngdoc overview
@@ -20,12 +20,15 @@ angular
     'angular-jwt',
     'ngMap'
   ])
-  .config(function ($routeProvider, $httpProvider,jwtOptionsProvider) {
+  .config(function ($routeProvider, $httpProvider, jwtOptionsProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main',
+        data: {
+          requiresLogin: true
+        }
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -52,14 +55,24 @@ angular
         controller:'MainCtrl',
         controllerAs:'main'
       })
+      .when('/donativos',{
+        templateUrl: 'views/donativos.html',
+        controller:'MainCtrl',
+        controllerAs:'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
-
-     jwtOptionsProvider.config({
-      authPrefix:'JWT',
-      whiteListedDomains: ['localhost','127.0.0.1:8000'],
-      tokenGetter: localStorage.getItem('JWT'),
-     })
-     //$httpProvider.interceptors.push('jwtInterceptor');
+      //$httpProvider.defaults.headers.common['Authorization'] = 'JWT '+localStorage.getItem('JWT');
+      jwtOptionsProvider.config({
+        authHeader:'Authorization',
+        authPrefix:'JWT',
+        whiteListedDomains : ['127.0.0.1:8000'],
+        tokenGetter : function(options, jwtHelper){
+          var token = localStorage.getItem('JWT');
+          console.log(token);
+          return token;
+        }
+      })
+     $httpProvider.interceptors.push('jwtInterceptor');
   });

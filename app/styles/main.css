@@ -219,10 +219,13 @@ a:focus {
   -webkit-appearance: none;
   font-weight: normal !important;
 }
-
+.mtb2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .mtb {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .mb {
@@ -293,10 +296,21 @@ position: absolute;
 }
 .donativos{
   color:#fff !important;
+  font-weight: 200;
 }
 .donativos:hover{
   color:#fff !important;
   background: #1e4567 !important;
+}
+.paypal-button{
+    margin-top: 20px;
+    max-width: 240px;
+    height: auto;
+    border: 1px solid #003085;
+    border-radius: 12px;
+    padding: 5px;
+    display: block;
+    margin: 20px auto;
 }
 /* Portfolio Wrap */
 #portfoliowrap {
